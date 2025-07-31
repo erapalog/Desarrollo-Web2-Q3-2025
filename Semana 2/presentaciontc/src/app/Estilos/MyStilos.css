@@ -1,0 +1,11 @@
+.clase-tarjeta{
+    border: 1px solid #ddd,
+    borderRadius: 8px,
+    padding: 16px,
+    backgroundColor: #fff,
+    boxShadow: 0 2px 8px rgba(0,0,0,0.1),
+    maxWidth: 300px,
+    margin: 16px auto
+   
+  }
+ 
