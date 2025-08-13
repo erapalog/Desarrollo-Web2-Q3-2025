@@ -54,8 +54,6 @@ app.post('/producto',async(req,res)=>{
         const producto = await Producto.create(req.body);
 
         res.status(200).json({"Mensaje":'Agregado Correctamente' , 'data':producto});
-
-
         
     } catch (error) {
          res.status(500).json({"Error":'Ocurrio un error' + error});
