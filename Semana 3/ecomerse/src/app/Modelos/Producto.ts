@@ -1,5 +1,5 @@
 export interface Producto{
-    idProducto:number
+    idProducto?:number
     nombreProducto:string
     precioProducto:number
     isvProducto:number

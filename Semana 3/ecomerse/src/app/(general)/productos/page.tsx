@@ -4,7 +4,7 @@ import { useContextProducto } from '@/app/Providers/ProviderProducto'
 import React, { useEffect } from 'react'
 
 export default function page() {
-  const { producto, setProducto, agregarCarrito, carritoProducto } = useContextProducto();
+  const {  setProducto } = useContextProducto();
 
   async function cargarProductos() {
 

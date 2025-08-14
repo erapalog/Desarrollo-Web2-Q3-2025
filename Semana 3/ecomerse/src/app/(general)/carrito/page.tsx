@@ -1,4 +1,5 @@
 'use client'
+import BotonEliminar from '@/app/Componentes/BotonEliminar'
 import CardComponent from '@/app/Componentes/CardComponent'
 import { useContextProducto } from '@/app/Providers/ProviderProducto'
 import React from 'react'
@@ -13,7 +14,11 @@ export default function page() {
 
                 {
                     carritoProducto.map((item) => (
-                        <CardComponent {...item} key={item.idProducto}></CardComponent>
+                        <div className='col-md-4'>
+                                <CardComponent {...item} key={item.idProducto}></CardComponent>
+                                <BotonEliminar></BotonEliminar>
+                        </div>
+                        
                     ))
                 }
 

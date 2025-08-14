@@ -18,8 +18,23 @@ export default function ProviderProducto({children}:PlantillaNode) {
     setCarritoProducto([...carritoProducto,item])
   }
 
+  async function guardarProducto(producto:Producto){
+     const respuesta = await fetch("http://localhost:5000/producto",{
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json'
+        },
+        body: JSON.stringify(producto)
+     });
+
+     const data= await respuesta.json();
+
+     alert("Producto agregado correctamente")
+
+  }
+
   return (
-    <contexProducto.Provider value={{producto,setProducto,carritoProducto,agregarCarrito}}>
+    <contexProducto.Provider value={{producto,setProducto,carritoProducto,agregarCarrito,guardarProducto}}>
         {children}
     </contexProducto.Provider>
   )

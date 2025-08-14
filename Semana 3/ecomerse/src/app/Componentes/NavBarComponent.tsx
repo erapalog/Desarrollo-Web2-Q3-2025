@@ -22,6 +22,9 @@ export default function NavBarComponent() {
                              <li className="nav-item">
                                 <Link className="nav-link" href="/informacion">Informacion Pagina</Link>
                             </li>
+                             <li className="nav-item">
+                                <Link className="nav-link" href="/crearproducto">Agregar Producto</Link>
+                            </li>
                          
                          
                         </ul>
