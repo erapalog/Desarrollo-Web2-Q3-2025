@@ -1,8 +1,10 @@
 const express = require('express')
 const sequelize = require('./Conexion/database')
 const Employee = require('./Modelos/Employee')
+var cors = require('cors')
 
 const app = express();
+app.use(cors())
 
 app.use(express.json())
 
@@ -32,9 +34,7 @@ app.get('/sum-salario-por-departamento', async (req, resp) => {
         resp.status(500).json({ 'Mensaje': 'Ocurrio un error', data: error })
     }
 
-
-
-})
+});
 
 //select count(*), department_id,job_id from employees group by department_id,job_id order by job_id;
 app.get('/conteo-empleados-por-depto', async (req, resp) => {
